@@ -1,0 +1,19 @@
+cluster:
+  id: 1
+  name: cl1
+ipam:
+  mode: cluster-pool
+  operator:
+    clusterPoolIPv4PodCIDRList:
+      - "10.10.3.0/24"
+    clusterPoolIPv4MaskSize: 26
+routingMode: tunnel
+tunnelProtocol: vxlan
+kubeProxyReplacement: true
+nodePort:
+  enabled: true
+enableIPv4Masquerade: true
+bpf:
+  masquerade: true
+hostReachableServices:
+  enabled: true
